@@ -2,11 +2,18 @@
 
 import * as React from "react"
 import {
+<<<<<<< HEAD
+=======
+  closestCenter,
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   DndContext,
   KeyboardSensor,
   MouseSensor,
   TouchSensor,
+<<<<<<< HEAD
   closestCenter,
+=======
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   useSensor,
   useSensors,
   type DragEndEvent,
@@ -14,18 +21,42 @@ import {
 } from "@dnd-kit/core"
 import { restrictToVerticalAxis } from "@dnd-kit/modifiers"
 import {
+<<<<<<< HEAD
   SortableContext,
   arrayMove,
+=======
+  arrayMove,
+  SortableContext,
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   useSortable,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
 import {
+<<<<<<< HEAD
   ColumnDef,
   ColumnFiltersState,
   Row,
   SortingState,
   VisibilityState,
+=======
+  IconChevronDown,
+  IconChevronLeft,
+  IconChevronRight,
+  IconChevronsLeft,
+  IconChevronsRight,
+  IconCircleCheckFilled,
+  IconDotsVertical,
+  IconGripVertical,
+  IconLayoutColumns,
+  IconLoader,
+  IconPlus,
+  IconTrendingUp,
+} from "@tabler/icons-react"
+import {
+  ColumnDef,
+  ColumnFiltersState,
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   flexRender,
   getCoreRowModel,
   getFacetedRowModel,
@@ -33,6 +64,7 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
+<<<<<<< HEAD
   useReactTable,
 } from "@tanstack/react-table"
 import {
@@ -50,20 +82,48 @@ import {
   PlusIcon,
   TrendingUpIcon,
 } from "lucide-react"
+=======
+  Row,
+  SortingState,
+  useReactTable,
+  VisibilityState,
+} from "@tanstack/react-table"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import { toast } from "sonner"
 import { z } from "zod"
 
+<<<<<<< HEAD
 import { useIsMobile } from '@/hooks/use-mobile'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+=======
+import { useIsMobile } from "@/hooks/use-mobile"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+<<<<<<< HEAD
 } from '@/components/ui/chart'
 import { Checkbox } from '@/components/ui/checkbox'
+=======
+} from "@/components/ui/chart"
+import { Checkbox } from "@/components/ui/checkbox"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -71,15 +131,22 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+<<<<<<< HEAD
 } from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+=======
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
+<<<<<<< HEAD
 } from '@/components/ui/select'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -92,6 +159,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
+=======
+} from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   Table,
   TableBody,
@@ -99,13 +170,21 @@ import {
   TableHead,
   TableHeader,
   TableRow,
+<<<<<<< HEAD
 } from '@/components/ui/table'
+=======
+} from "@/components/ui/table"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
+<<<<<<< HEAD
 } from '@/components/ui/tabs'
+=======
+} from "@/components/ui/tabs"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 
 export const schema = z.object({
   id: z.number(),
@@ -129,9 +208,15 @@ function DragHandle({ id }: { id: number }) {
       {...listeners}
       variant="ghost"
       size="icon"
+<<<<<<< HEAD
       className="size-7 text-muted-foreground hover:bg-transparent"
     >
       <GripVerticalIcon className="size-3 text-muted-foreground" />
+=======
+      className="text-muted-foreground size-7 hover:bg-transparent"
+    >
+      <IconGripVertical className="text-muted-foreground size-3" />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
       <span className="sr-only">Drag to reorder</span>
     </Button>
   )
@@ -182,7 +267,11 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     header: "Section Type",
     cell: ({ row }) => (
       <div className="w-32">
+<<<<<<< HEAD
         <Badge variant="outline" className="px-1.5 text-muted-foreground">
+=======
+        <Badge variant="outline" className="text-muted-foreground px-1.5">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
           {row.original.type}
         </Badge>
       </div>
@@ -192,6 +281,7 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => (
+<<<<<<< HEAD
       <Badge
         variant="outline"
         className="flex gap-1 px-1.5 text-muted-foreground [&_svg]:size-3"
@@ -200,6 +290,13 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
           <CheckCircle2Icon className="text-green-500 dark:text-green-400" />
         ) : (
           <LoaderIcon />
+=======
+      <Badge variant="outline" className="text-muted-foreground px-1.5">
+        {row.original.status === "Done" ? (
+          <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
+        ) : (
+          <IconLoader />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
         )}
         {row.original.status}
       </Badge>
@@ -223,7 +320,11 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
           Target
         </Label>
         <Input
+<<<<<<< HEAD
           className="h-8 w-16 border-transparent bg-transparent text-right shadow-none hover:bg-input/30 focus-visible:border focus-visible:bg-background"
+=======
+          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
           defaultValue={row.original.target}
           id={`${row.original.id}-target`}
         />
@@ -248,7 +349,11 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
           Limit
         </Label>
         <Input
+<<<<<<< HEAD
           className="h-8 w-16 border-transparent bg-transparent text-right shadow-none hover:bg-input/30 focus-visible:border focus-visible:bg-background"
+=======
+          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
           defaultValue={row.original.limit}
           id={`${row.original.id}-limit`}
         />
@@ -272,7 +377,12 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
           </Label>
           <Select>
             <SelectTrigger
+<<<<<<< HEAD
               className="h-8 w-40"
+=======
+              className="w-38 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate"
+              size="sm"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               id={`${row.original.id}-reviewer`}
             >
               <SelectValue placeholder="Assign reviewer" />
@@ -295,10 +405,17 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
+<<<<<<< HEAD
             className="flex size-8 text-muted-foreground data-[state=open]:bg-muted"
             size="icon"
           >
             <MoreVerticalIcon />
+=======
+            className="data-[state=open]:bg-muted text-muted-foreground flex size-8"
+            size="icon"
+          >
+            <IconDotsVertical />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
             <span className="sr-only">Open menu</span>
           </Button>
         </DropdownMenuTrigger>
@@ -307,7 +424,11 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
           <DropdownMenuItem>Make a copy</DropdownMenuItem>
           <DropdownMenuItem>Favorite</DropdownMenuItem>
           <DropdownMenuSeparator />
+<<<<<<< HEAD
           <DropdownMenuItem>Delete</DropdownMenuItem>
+=======
+          <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
         </DropdownMenuContent>
       </DropdownMenu>
     ),
@@ -407,7 +528,11 @@ export function DataTable({
   return (
     <Tabs
       defaultValue="outline"
+<<<<<<< HEAD
       className="flex w-full flex-col justify-start gap-6"
+=======
+      className="w-full flex-col justify-start gap-6"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
     >
       <div className="flex items-center justify-between px-4 lg:px-6">
         <Label htmlFor="view-selector" className="sr-only">
@@ -415,7 +540,12 @@ export function DataTable({
         </Label>
         <Select defaultValue="outline">
           <SelectTrigger
+<<<<<<< HEAD
             className="@4xl/main:hidden flex w-fit"
+=======
+            className="flex w-fit @4xl/main:hidden"
+            size="sm"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
             id="view-selector"
           >
             <SelectValue placeholder="Select a view" />
@@ -427,6 +557,7 @@ export function DataTable({
             <SelectItem value="focus-documents">Focus Documents</SelectItem>
           </SelectContent>
         </Select>
+<<<<<<< HEAD
         <TabsList className="@4xl/main:flex hidden">
           <TabsTrigger value="outline">Outline</TabsTrigger>
           <TabsTrigger value="past-performance" className="gap-1">
@@ -446,6 +577,15 @@ export function DataTable({
             >
               2
             </Badge>
+=======
+        <TabsList className="**:data-[slot=badge]:bg-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
+          <TabsTrigger value="outline">Outline</TabsTrigger>
+          <TabsTrigger value="past-performance">
+            Past Performance <Badge variant="secondary">3</Badge>
+          </TabsTrigger>
+          <TabsTrigger value="key-personnel">
+            Key Personnel <Badge variant="secondary">2</Badge>
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
           </TabsTrigger>
           <TabsTrigger value="focus-documents">Focus Documents</TabsTrigger>
         </TabsList>
@@ -453,10 +593,17 @@ export function DataTable({
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm">
+<<<<<<< HEAD
                 <ColumnsIcon />
                 <span className="hidden lg:inline">Customize Columns</span>
                 <span className="lg:hidden">Columns</span>
                 <ChevronDownIcon />
+=======
+                <IconLayoutColumns />
+                <span className="hidden lg:inline">Customize Columns</span>
+                <span className="lg:hidden">Columns</span>
+                <IconChevronDown />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
@@ -484,7 +631,11 @@ export function DataTable({
             </DropdownMenuContent>
           </DropdownMenu>
           <Button variant="outline" size="sm">
+<<<<<<< HEAD
             <PlusIcon />
+=======
+            <IconPlus />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
             <span className="hidden lg:inline">Add Section</span>
           </Button>
         </div>
@@ -502,7 +653,11 @@ export function DataTable({
             id={sortableId}
           >
             <Table>
+<<<<<<< HEAD
               <TableHeader className="sticky top-0 z-10 bg-muted">
+=======
+              <TableHeader className="bg-muted sticky top-0 z-10">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => {
@@ -545,7 +700,11 @@ export function DataTable({
           </DndContext>
         </div>
         <div className="flex items-center justify-between px-4">
+<<<<<<< HEAD
           <div className="hidden flex-1 text-sm text-muted-foreground lg:flex">
+=======
+          <div className="text-muted-foreground hidden flex-1 text-sm lg:flex">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
             {table.getFilteredRowModel().rows.length} row(s) selected.
           </div>
@@ -560,7 +719,11 @@ export function DataTable({
                   table.setPageSize(Number(value))
                 }}
               >
+<<<<<<< HEAD
                 <SelectTrigger className="w-20" id="rows-per-page">
+=======
+                <SelectTrigger size="sm" className="w-20" id="rows-per-page">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
                   <SelectValue
                     placeholder={table.getState().pagination.pageSize}
                   />
@@ -586,7 +749,11 @@ export function DataTable({
                 disabled={!table.getCanPreviousPage()}
               >
                 <span className="sr-only">Go to first page</span>
+<<<<<<< HEAD
                 <ChevronsLeftIcon />
+=======
+                <IconChevronsLeft />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               </Button>
               <Button
                 variant="outline"
@@ -596,7 +763,11 @@ export function DataTable({
                 disabled={!table.getCanPreviousPage()}
               >
                 <span className="sr-only">Go to previous page</span>
+<<<<<<< HEAD
                 <ChevronLeftIcon />
+=======
+                <IconChevronLeft />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               </Button>
               <Button
                 variant="outline"
@@ -606,7 +777,11 @@ export function DataTable({
                 disabled={!table.getCanNextPage()}
               >
                 <span className="sr-only">Go to next page</span>
+<<<<<<< HEAD
                 <ChevronRightIcon />
+=======
+                <IconChevronRight />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               </Button>
               <Button
                 variant="outline"
@@ -616,7 +791,11 @@ export function DataTable({
                 disabled={!table.getCanNextPage()}
               >
                 <span className="sr-only">Go to last page</span>
+<<<<<<< HEAD
                 <ChevronsRightIcon />
+=======
+                <IconChevronsRight />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               </Button>
             </div>
           </div>
@@ -665,6 +844,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
   const isMobile = useIsMobile()
 
   return (
+<<<<<<< HEAD
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="link" className="w-fit px-0 text-left text-foreground">
@@ -679,6 +859,22 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto py-4 text-sm">
+=======
+    <Drawer direction={isMobile ? "bottom" : "right"}>
+      <DrawerTrigger asChild>
+        <Button variant="link" className="text-foreground w-fit px-0 text-left">
+          {item.header}
+        </Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader className="gap-1">
+          <DrawerTitle>{item.header}</DrawerTitle>
+          <DrawerDescription>
+            Showing total visitors for the last 6 months
+          </DrawerDescription>
+        </DrawerHeader>
+        <div className="flex flex-col gap-4 overflow-y-auto px-4 text-sm">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
           {!isMobile && (
             <>
               <ChartContainer config={chartConfig}>
@@ -723,9 +919,15 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
               </ChartContainer>
               <Separator />
               <div className="grid gap-2">
+<<<<<<< HEAD
                 <div className="flex gap-2 font-medium leading-none">
                   Trending up by 5.2% this month{" "}
                   <TrendingUpIcon className="size-4" />
+=======
+                <div className="flex gap-2 leading-none font-medium">
+                  Trending up by 5.2% this month{" "}
+                  <IconTrendingUp className="size-4" />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
                 </div>
                 <div className="text-muted-foreground">
                   Showing total visitors for the last 6 months. This is just
@@ -809,6 +1011,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
             </div>
           </form>
         </div>
+<<<<<<< HEAD
         <SheetFooter className="mt-auto flex gap-2 sm:flex-col sm:space-x-0">
           <Button className="w-full">Submit</Button>
           <SheetClose asChild>
@@ -819,5 +1022,15 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
         </SheetFooter>
       </SheetContent>
     </Sheet>
+=======
+        <DrawerFooter>
+          <Button>Submit</Button>
+          <DrawerClose asChild>
+            <Button variant="outline">Done</Button>
+          </DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   )
 }

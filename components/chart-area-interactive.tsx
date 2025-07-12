@@ -3,31 +3,57 @@
 import * as React from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
+<<<<<<< HEAD
 import { useIsMobile } from '@/hooks/use-mobile'
 import {
   Card,
+=======
+import { useIsMobile } from "@/hooks/use-mobile"
+import {
+  Card,
+  CardAction,
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 } from '@/components/ui/card'
+=======
+} from "@/components/ui/card"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+<<<<<<< HEAD
 } from '@/components/ui/chart'
+=======
+} from "@/components/ui/chart"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
+<<<<<<< HEAD
 } from '@/components/ui/select'
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from '@/components/ui/toggle-group'
+=======
+} from "@/components/ui/select"
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/components/ui/toggle-group"
+
+export const description = "An interactive area chart"
+
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },
@@ -128,17 +154,29 @@ const chartConfig = {
   },
   desktop: {
     label: "Desktop",
+<<<<<<< HEAD
     color: "hsl(var(--chart-1))",
   },
   mobile: {
     label: "Mobile",
     color: "hsl(var(--chart-2))",
+=======
+    color: "var(--primary)",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "var(--primary)",
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   },
 } satisfies ChartConfig
 
 export function ChartAreaInteractive() {
   const isMobile = useIsMobile()
+<<<<<<< HEAD
   const [timeRange, setTimeRange] = React.useState("30d")
+=======
+  const [timeRange, setTimeRange] = React.useState("90d")
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 
   React.useEffect(() => {
     if (isMobile) {
@@ -162,20 +200,32 @@ export function ChartAreaInteractive() {
 
   return (
     <Card className="@container/card">
+<<<<<<< HEAD
       <CardHeader className="relative">
         <CardTitle>Total Visitors</CardTitle>
         <CardDescription>
           <span className="@[540px]/card:block hidden">
+=======
+      <CardHeader>
+        <CardTitle>Total Visitors</CardTitle>
+        <CardDescription>
+          <span className="hidden @[540px]/card:block">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
             Total for the last 3 months
           </span>
           <span className="@[540px]/card:hidden">Last 3 months</span>
         </CardDescription>
+<<<<<<< HEAD
         <div className="absolute right-4 top-4">
+=======
+        <CardAction>
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
           <ToggleGroup
             type="single"
             value={timeRange}
             onValueChange={setTimeRange}
             variant="outline"
+<<<<<<< HEAD
             className="@[767px]/card:flex hidden"
           >
             <ToggleGroupItem value="90d" className="h-8 px-2.5">
@@ -191,6 +241,18 @@ export function ChartAreaInteractive() {
           <Select value={timeRange} onValueChange={setTimeRange}>
             <SelectTrigger
               className="@[767px]/card:hidden flex w-40"
+=======
+            className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
+          >
+            <ToggleGroupItem value="90d">Last 3 months</ToggleGroupItem>
+            <ToggleGroupItem value="30d">Last 30 days</ToggleGroupItem>
+            <ToggleGroupItem value="7d">Last 7 days</ToggleGroupItem>
+          </ToggleGroup>
+          <Select value={timeRange} onValueChange={setTimeRange}>
+            <SelectTrigger
+              className="flex w-40 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
+              size="sm"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               aria-label="Select a value"
             >
               <SelectValue placeholder="Last 3 months" />
@@ -207,7 +269,11 @@ export function ChartAreaInteractive() {
               </SelectItem>
             </SelectContent>
           </Select>
+<<<<<<< HEAD
         </div>
+=======
+        </CardAction>
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
       </CardHeader>
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
@@ -258,6 +324,10 @@ export function ChartAreaInteractive() {
             />
             <ChartTooltip
               cursor={false}
+<<<<<<< HEAD
+=======
+              defaultIndex={isMobile ? -1 : 10}
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               content={
                 <ChartTooltipContent
                   labelFormatter={(value) => {

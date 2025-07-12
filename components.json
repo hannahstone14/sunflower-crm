@@ -1,5 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
+<<<<<<< HEAD
   "style": "default",
   "rsc": true,
   "tsx": true,
@@ -7,6 +8,15 @@
     "config": "tailwind.config.ts",
     "css": "app/globals.css",
     "baseColor": "neutral",
+=======
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "app/globals.css",
+    "baseColor": "stone",
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
     "cssVariables": true,
     "prefix": ""
   },

@@ -1,18 +1,31 @@
 "use client"
 
 import {
+<<<<<<< HEAD
   BellIcon,
   CreditCardIcon,
   LogOutIcon,
   MoreVerticalIcon,
   UserCircleIcon,
 } from "lucide-react"
+=======
+  IconCreditCard,
+  IconDotsVertical,
+  IconLogout,
+  IconNotification,
+  IconUserCircle,
+} from "@tabler/icons-react"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
+<<<<<<< HEAD
 } from '@/components/ui/avatar'
+=======
+} from "@/components/ui/avatar"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,13 +34,21 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+<<<<<<< HEAD
 } from '@/components/ui/dropdown-menu'
+=======
+} from "@/components/ui/dropdown-menu"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
+<<<<<<< HEAD
 } from '@/components/ui/sidebar'
+=======
+} from "@/components/ui/sidebar"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 
 export function NavUser({
   user,
@@ -55,6 +76,7 @@ export function NavUser({
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
+<<<<<<< HEAD
                 <span className="truncate text-xs text-muted-foreground">
                   {user.email}
                 </span>
@@ -64,6 +86,17 @@ export function NavUser({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+=======
+                <span className="text-muted-foreground truncate text-xs">
+                  {user.email}
+                </span>
+              </div>
+              <IconDotsVertical className="ml-auto size-4" />
+            </SidebarMenuButton>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
             side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}
@@ -76,7 +109,11 @@ export function NavUser({
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
+<<<<<<< HEAD
                   <span className="truncate text-xs text-muted-foreground">
+=======
+                  <span className="text-muted-foreground truncate text-xs">
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
                     {user.email}
                   </span>
                 </div>
@@ -85,6 +122,7 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
+<<<<<<< HEAD
                 <UserCircleIcon />
                 Account
               </DropdownMenuItem>
@@ -94,12 +132,27 @@ export function NavUser({
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <BellIcon />
+=======
+                <IconUserCircle />
+                Account
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <IconCreditCard />
+                Billing
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <IconNotification />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
+<<<<<<< HEAD
               <LogOutIcon />
+=======
+              <IconLogout />
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
               Log out
             </DropdownMenuItem>
           </DropdownMenuContent>

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
+<<<<<<< HEAD
 import { LucideIcon } from "lucide-react"
+=======
+import { type Icon } from "@tabler/icons-react"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 
 import {
   SidebarGroup,
@@ -9,7 +13,11 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+<<<<<<< HEAD
 } from '@/components/ui/sidebar'
+=======
+} from "@/components/ui/sidebar"
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
 
 export function NavSecondary({
   items,
@@ -18,7 +26,11 @@ export function NavSecondary({
   items: {
     title: string
     url: string
+<<<<<<< HEAD
     icon: LucideIcon
+=======
+    icon: Icon
+>>>>>>> 8fe1ddd (refactor: move Next.js app to repo root for deployment)
   }[]
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
